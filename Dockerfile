@@ -48,6 +48,7 @@ RUN apt-get update && \
         python3-pip \
         python3-setuptools &&\
         rm -rf /var/lib/apt/lists/* &&\
+        pip3 install gunicorn --no-cache-dir &&\
         pip3 install setuptools wheel virtualenv awscli --upgrade --no-cache-dir &&\
         pip3 install -U scikit-image --no-cache-dir &&\
         pip3 install -r requirements.txt --no-cache-dir &&\
