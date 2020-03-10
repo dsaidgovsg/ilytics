@@ -298,7 +298,7 @@ netMain = None
 metaMain = None
 altNames = None
 
-def performDetect(imagePath="data/20191114_141523.jpg", thresh= 0.25, configPath = "./rotifer_20200204.cfg", weightPath = "./backup/rotifer_20200204.weights", metaPath= "./data/obj.data", showImage= True, makeImageOnly = False, initOnly= False):
+def performDetect(imagePath="data/20191114_141523.jpg", thresh= 0.25, configPath = "./yolo-obj.cfg", weightPath = "./backup/yolo-obj_best.weights", metaPath= "./data/obj.data", showImage= True, makeImageOnly = False, initOnly= False):
     """
     Convenience function to handle the detection and returns of objects.
 
