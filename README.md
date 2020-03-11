@@ -1,3 +1,5 @@
+![alt text](logo.png)
+
 ## Backend
 
 This repo contains the backend(gunicorn, flask, and darknet model) for ilytics.sg 
@@ -6,12 +8,12 @@ This repo contains the backend(gunicorn, flask, and darknet model) for ilytics.s
 
 - Change the S3 directory at `run.sh` file for both `.cfg` and `.weights` 
 
-- Follow the Run Instruction below
+- Follow the **Run Instruction** below
 
 ## Run Instruction
 Note: Do not terminate the existing EC2 instance just ssh into the running EC2 instance
 
-- Stop the existing the guicorn process running the old inference model
+- Stop the existing the guicorn process, running the old inference model
 
 - `rm -rf ilytics`
 
