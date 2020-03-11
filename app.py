@@ -14,15 +14,32 @@ stats = []
 
 @app.route("/")
 def helloWorld():
-  return "Hello, cross-origin-world!"
+    """
+    Root route 
+    
+    Returns:
+        String -- Return a valid string
+    """
+    return "Hello, cross-origin-world!"
 
-# sanity check route
 @app.route('/ping', methods=['GET'])
-def ping_pong():
+def pingPong():
+    """
+    Ping route for sanity check
+    
+    Returns:
+        JSON Dictionary -- Return a valid key value pair
+    """
     return jsonify({'data': 'pong!'})
 
 @app.route('/upload', methods=['POST'])
 def uploadFile():
+    """
+    REST API endpoint for image inference
+    
+    Returns:
+        JSON Dictionary -- Return a dictionary containing image in base64 format and statistics of the counts and classification of rotifers
+    """
     file = request.files['file']
     file.save("./test.jpg")
     stats = darknet.performDetect(imagePath="./test.jpg")
