@@ -13,7 +13,7 @@ This repo contains the backend(gunicorn, flask, and darknet model) for ilytics.s
 ## Run Instruction
 Note: Do not terminate the existing EC2 instance just ssh into the running EC2 instance
 
-- Stop the existing the guicorn process, running the old inference model
+- Stop the existing Gunicorn process, running the old inference model
 
 - `rm -rf ilytics`
 
