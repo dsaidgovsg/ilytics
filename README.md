@@ -1,4 +1,4 @@
-![alt text](logo.png)
+<img src="logo.png" width="200">
 
 ## Backend
 
