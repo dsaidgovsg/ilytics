@@ -297,7 +297,7 @@ def detect_image(net, meta, im, thresh=.5, hier_thresh=.5, nms=.45, debug=False)
                     print(nameTag)
                     print(dets[j].prob[i])
                     print((b.x, b.y, b.w, b.h))
-                res.append((nameTag, dets[j].prob[i], (b.x, b.y, b.w, b.h)))
+                res.append((nameTag, dets[j].prob[i], (b.x, b.y, b.w, b.h), i))
     if debug: print("did range")
     res = sorted(res, key=lambda x: -x[1])
     if debug: print("did sort")
@@ -418,6 +418,7 @@ def performDetect(imagePath="data/20191114_141523.jpg", thresh=0.25, configPath=
                 imcaption.append(pstring)
                 bounds = detection[2]
                 shape = image.shape
+                class_id = detection[3]
                 # x = shape[1]
                 # xExtent = int(x * bounds[2] / 100)
                 # y = shape[0]
@@ -443,7 +444,13 @@ def performDetect(imagePath="data/20191114_141523.jpg", thresh=0.25, configPath=
                                                   shape=shape)
                 rr5, cc5 = draw.polygon_perimeter([x[1] for x in boundingBox], [x[0] - 1 for x in boundingBox],
                                                   shape=shape)
-                boxColor = (int(255 * (1 - (confidence ** 2))), int(255 * (confidence ** 2)), 0)
+                # if healthy classes
+                clr = 0.5 if confidence < 0.5 else confidence
+                if class_id < 2:
+                    boxColor = (0, int(255 * (clr)), 0)
+                else:
+                    boxColor = (int(255 * (clr)), 0, 0)
+
                 draw.set_color(image, (rr, cc), boxColor, alpha=0.8)
                 draw.set_color(image, (rr2, cc2), boxColor, alpha=0.8)
                 draw.set_color(image, (rr3, cc3), boxColor, alpha=0.8)
