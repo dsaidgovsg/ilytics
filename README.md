@@ -31,10 +31,10 @@ This repo contains the backend(gunicorn, flask, and darknet model) for ilytics.s
  `docker run -itd -p 8888:8888 ilytics_backend_cpu`
 
 6. Check if container is running
-> Run the following command and ensure ilytics_backend_cpu is visible on the "Images" column
 ```
-docker ps
+Run the following command and ensure ilytics_backend_cpu is visible on the "Images" column
 ```
+- `docker ps`
 
 7. Your Backend is up and running!
 
