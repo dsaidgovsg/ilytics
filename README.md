@@ -10,8 +10,8 @@ This repo contains the backend(gunicorn, flask, and darknet model) for ilytics.s
 
 1. Clone this repository & checkout to the correct branch
 
-> `git clone https://github.com/dsaidgovsg/ilytics.git`
-> `git checkout -t handover_sfa_cpu`
+> - `git clone https://github.com/dsaidgovsg/ilytics.git`
+> - `git checkout -t handover_sfa_cpu`
 
 2. Navigate into the repository
 
