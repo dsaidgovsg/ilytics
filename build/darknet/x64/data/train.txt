@@ -1,5 +1,0 @@
-data/obj/IMG_1750.jpg
-data/obj/IMG_1751.jpg
-data/obj/IMG_1752.jpg
-data/obj/IMG_1753.jpg
-data/obj/IMG_1754.jpg

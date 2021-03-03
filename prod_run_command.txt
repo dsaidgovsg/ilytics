@@ -1,0 +1,26 @@
+Pre-requisite
+Ensure that the 4 files are in ./aimodel folder before running 
+the following steps.
+
+.cfg, .data, .names, .weights
+
+
+Step 1 (Build Docker Image)
+Navigate to this folder from CLI and run the below command.
+
+docker build . --tag ilytics_backend_cpu
+
+Step 2 (Run Docker Container)
+
+docker run -itd -p 8888:8888 ilytics_backend_cpu
+
+Step 3 (Check if container is running)
+Run the following command and ensure ilytics_backend_cpu is visible on 
+the "Images" column
+
+docker ps
+
+Step 4 
+You are ready to run 
+
+
