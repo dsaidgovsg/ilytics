@@ -16,7 +16,7 @@ This repo contains the backend(gunicorn, flask, and darknet model) for ilytics.s
 
  - `cd ilytics`
  - `git fetch -a`
- - `git checkout -t handover_sfa_gpu`
+ - `git checkout -t origin/handover_sfa_gpu`
 
 3. Ensure that the 4 files are in ./aimodel folder before running the following steps.
 
