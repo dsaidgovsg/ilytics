@@ -18,25 +18,27 @@ This repo contains the backend(gunicorn, flask, and darknet model) for ilytics.s
  - `git fetch -a`
  - `git checkout -t origin/handover_sfa_gpu`
 
-3. Ensure that the 4 files are in ./aimodel folder before running the following steps.
+3. Create a folder name **aimodel**
+
+4. Ensure that the 4 files are in ./aimodel folder before running the following steps.
 
 > 1. `.cfg`
 > 2. `.data` 
 > 3. `.names`
 > 4. `.weights`
 
-4. Build the docker image
+5. Build the docker image
  `docker build . --tag ilytics_backend_gpu`
 
-5. Run the docker container
- `docker run --gpus=all --name ilytics_backend_gpu -itd -p 8888:8888 ilytics_backend_gpu`
+6. Run the docker container
+ `docker run --gpus=all --name ilytics_backend_gpu_container -itd -p 8888:8888 ilytics_backend_gpu`
 
-6. Check if container is running
+7. Check if container is running
 ```
 Run the following command and ensure 'ilytics_backend_gpu' is visible on the 'Name' column
 ```
-- `docker ps`
+- `docker logs ilytics_backend_gpu_container`
 
-7. Your Backend is up and running!
+8. Your Backend is up and running!
 
 
