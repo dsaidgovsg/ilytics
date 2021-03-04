@@ -28,7 +28,7 @@ This repo contains the backend(gunicorn, flask, and darknet model) for ilytics.s
 > 4. `.weights`
 
 5. Build the docker image
- `docker build . --tag ilytics_backend_gpu`
+ `docker build . --no-cache --tag ilytics_backend_gpu`
 
 6. Run the docker container
  `docker run --gpus=all --name ilytics_backend_gpu_container -itd -p 8888:8888 ilytics_backend_gpu`
