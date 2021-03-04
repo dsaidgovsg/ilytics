@@ -43,7 +43,7 @@ Run the following command and ensure 'ilytics_backend_gpu' is visible on the 'Na
 
 ### Cuda out of memory error
 If the gpu memory is not enough for the application, edit `./aimodel/*.cfg` file. Reduce the width and height to a multiple of 64.  
-*Do note that reducing the dimensions will affect the accuracy. If accuracy is priority, use handover_sfa_cpu branch instead.*
+*Do note that reducing the dimensions will affect the accuracy. If accuracy is priority, use `handover_sfa_cpu branch` instead.*
 > `Line 8:` ~~width=832~~ -> `width=640`
 > `Line 9:` ~~height=832~~ -> `height=640` 
 
