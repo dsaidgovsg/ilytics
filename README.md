@@ -33,11 +33,10 @@ This repo contains the backend(gunicorn, flask, and darknet model) for ilytics.s
 6. Run the docker container
  `docker run --gpus=all --name ilytics_backend_gpu_container -itd -p 8888:8888 ilytics_backend_gpu`
 
-7. Check if container is running
+7. Run the following command and ensure that the output is similar to the output below
 ```
-Run the following command and ensure that the output is similar to the output below
+docker logs ilytics_backend_gpu_container
 ```
-- `docker logs ilytics_backend_gpu_container`  
 > `Getting weights from S3`  
 > `running gunicorn...`  
 > `[2021-03-04 03:34:47 +0000] [7] [INFO] Starting gunicorn 20.0.4`  
