@@ -16,26 +16,34 @@ This repo contains the backend(gunicorn, flask, and darknet model) for ilytics.s
 
  - `cd ilytics`
  - `git fetch -a`
- - `git checkout -t handover_sfa_cpu`
+ - `git checkout -t origin/handover_sfa_cpu`
 
-3. Ensure that the 4 files are in ./aimodel folder before running the following steps.
+3. Create a folder names **`aimodel`** in the repo. 
+
+4. Ensure that the 4 files are in ./aimodel folder before running the following steps.
 
 > 1. `.cfg`
 > 2. `.data` 
 > 3. `.names`
 > 4. `.weights`
 
-4. Build the docker image
+5. Build the docker image
  `docker build . --tag ilytics_backend_cpu`
 
-5. Run the docker container
- `docker run -itd -p 8888:8888 ilytics_backend_cpu`
+6. Run the docker container
+ `docker run -itd --name ilytics_backend_cpu_container -p 8888:8888 ilytics_backend_cpu`
 
-6. Check if container is running
-```
-Run the following command and ensure 'ilytics_backend_cpu' is visible on the 'Images' column
-```
-- `docker ps`
 
-7. Your Backend is up and running!
+7. Run the following command and ensure that the output is similar to the output below
+```
+docker logs ilytics_backend_cpu_container
+```
+> `Getting weights from S3`  
+> `running gunicorn...`  
+> `[2021-03-04 03:34:47 +0000] [7] [INFO] Starting gunicorn 20.0.4`  
+> `[2021-03-04 03:34:47 +0000] [7] [INFO] Listening at: http://0.0.0.0:8888 (7)`  
+> `[2021-03-04 03:34:47 +0000] [7] [INFO] Using worker: sync`  
+> `[2021-03-04 03:34:47 +0000] [10] [INFO] Booting worker with pid: 10`  
+
+8. Your Backend is up and running!
 
