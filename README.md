@@ -35,9 +35,10 @@ This repo contains the backend(gunicorn, flask, and darknet model) for ilytics.s
 
 7. Check if container is running
 ```
-Run the following command and ensure 'ilytics_backend_gpu' is visible on the 'Name' column
+Run the following command and ensure that the output is similar to the output below
 ```
 - `docker logs ilytics_backend_gpu_container`
+> `
 
 8. Your Backend is up and running!
 
