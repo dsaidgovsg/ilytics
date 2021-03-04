@@ -37,13 +37,13 @@ This repo contains the backend(gunicorn, flask, and darknet model) for ilytics.s
 ```
 Run the following command and ensure that the output is similar to the output below
 ```
-- `docker logs ilytics_backend_gpu_container`
-> `Getting weights from S3`
-> `running gunicorn...`
-> `[2021-03-04 03:34:47 +0000] [7] [INFO] Starting gunicorn 20.0.4`
-> `[2021-03-04 03:34:47 +0000] [7] [INFO] Listening at: http://0.0.0.0:8888 (7)`
-> `[2021-03-04 03:34:47 +0000] [7] [INFO] Using worker: sync`
-> `[2021-03-04 03:34:47 +0000] [10] [INFO] Booting worker with pid: 10`
+- `docker logs ilytics_backend_gpu_container`  
+> `Getting weights from S3`  
+> `running gunicorn...`  
+> `[2021-03-04 03:34:47 +0000] [7] [INFO] Starting gunicorn 20.0.4`  
+> `[2021-03-04 03:34:47 +0000] [7] [INFO] Listening at: http://0.0.0.0:8888 (7)`  
+> `[2021-03-04 03:34:47 +0000] [7] [INFO] Using worker: sync`  
+> `[2021-03-04 03:34:47 +0000] [10] [INFO] Booting worker with pid: 10`  
 
 8. Your Backend is up and running!
 
